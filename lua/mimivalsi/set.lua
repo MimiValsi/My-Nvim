@@ -32,6 +32,8 @@ local opt = {
 	updatetime = 50,
 
 	colorcolumn = "80",
+
+  guicursor = "n-v-c-sm:block"
 }
 
 for k, v in pairs(opt) do
