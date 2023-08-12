@@ -1,0 +1,9 @@
+--local cmp = require("cmp")
+--
+--cmp.setup({
+--  mappings = cmp.mapping.preset.insert({
+--    ["<Tab>"] = cmp.mapping.scroll_docs(4),
+--    ["<C-o"] = cmp.mapping.abort(),
+--    ["<CR>"] = cmp.mapping.confirm({ select = true }),
+--  }),
+--})
