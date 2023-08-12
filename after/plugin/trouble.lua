@@ -1,8 +1,16 @@
-local keymap = vim.keymap.set
+-- local keymap = vim.keymap.set
 
-keymap("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",
-  {silent = true, noremap = true}
-)
+-- keymap("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",
+--   {silent = true, noremap = true}
+-- )
+
+local wk = require("which-key")
+
+wk.register({
+  ["<leader>x"] = { name = "Trouble toggle"},
+  ["<leader>xq"] = { "<cmd>TroubleToggle quickfix<CR>", "Quickfix", {silent = true, noremap = true}},
+})
+
 local M = {}
 
 M.namespace = vim.api.nvim_create_namespace("LspTrouble")

@@ -49,7 +49,7 @@ lsp.set_preferences({
   }
 })
 
---lsp.on_attach(function (_, bufnr)
+-- lsp.on_attach(function (_, bufnr)
 --  local opts = {buffer = bufnr, remap = false}
 --  local keymap = vim.keymap.set
 --  local wk = require("which-key")
@@ -73,8 +73,9 @@ lsp.set_preferences({
 --  keymap("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
 --  keymap("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
 --  keymap("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
-  --keymap("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
---end)
+--  keymap("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+
+-- end)
 
 lsp.setup()
 

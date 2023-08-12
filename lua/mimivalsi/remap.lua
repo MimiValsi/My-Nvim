@@ -33,12 +33,14 @@ wk.register({
   ["<C-k>"] = { "<cmd>cnext<CR>zz", "Navigation up error" },
   ["<C-j>"] = { "<cmd>cprev<CR>zz", "Naviagtion down error"},
 
-  ["<leader>k"] = { "<cmd>lnext<cr>zz", "navigation up list" },
-  ["<leader>j"] = { "<cmd>lprev<cr>zz", "navigation down list" },
+  ["<leader>k"] = { "<cmd>lnext<cr>zz", "Navigation up list" },
+  ["<leader>j"] = { "<cmd>lprev<cr>zz", "Navigation down list" },
 
   ["<leader>s"] = { ":s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", "Replace every word under to cursor" },
 
   ["<leader>x"] = { "<cmd>!chmod +x %<CR>", { silent = true }, "Chmod buffer file" },
+
+  -- lspconfig mapping
   ["gd"] = { function () vim.lsp.buf.definition() end, "buf definition" },
   ["K"] = { function () vim.lsp.buf.hover() end, "buf hover" },
   ["<leader>vws"] = { function () vim.lsp.buf.workspace_symbol() end, "workspace symbol" },
@@ -48,6 +50,8 @@ wk.register({
   ["<leader>vca"] = { function () vim.lsp.buf.code_action() end, "code action" },
   ["<leader>vrr"] = { function () vim.lsp.buf.references() end, "references" },
   ["<leader>vrn"] = { function () vim.lsp.buf.rename() end, "rename" },
+
+  ["<leader>/"] = { vim.cmd.AutoInlineComment, "Line Comment"},
 })
 
 -- navigate within insert mode

@@ -1,3 +1,6 @@
-local keymap = vim.keymap.set
-keymap("n", "<leader>u", vim.cmd.UndotreeToggle)
+local wk = require("which-key")
+
+wk.register({
+  ["<leader>u"] = {vim.cmd.UndotreeToggle, "Undo tree toggle"},
+})
 
